@@ -25,7 +25,7 @@ html, body{
   background-size: cover;
 }
 
-#main-picture{
+#navigation{
 
 }
 
@@ -34,6 +34,7 @@ margin: 0;
 padding: 0;
   width: 95%;
 margin-left: 2.5%;
+margin-top: 2.5%;
 border: 1px solid var(--dark-white);
   background-color: white;
   -webkit-box-shadow: 1px 5px 5px 0px rgba(240,240,240,1);
