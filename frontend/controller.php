@@ -13,6 +13,13 @@ class Controller{
     require_once 'views/'.$template.".tpl.html";
   }
 
+  private function appartement1(){
+
+  }
+
+  private function startseite(){
+
+  }
 
 }
 

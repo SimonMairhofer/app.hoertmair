@@ -9,7 +9,7 @@
    if(method_exists($controller, $aktion)){
       $controller->run($aktion);
    }else{
-     $controller->run("startseite");
+     $controller->run($aktion);
    }
 
 ?>
