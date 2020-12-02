@@ -25,19 +25,47 @@
 
        <div class="content-allgemein">
 
-         <div class="app1">
-           <div id="bild1"></div>
-           <div id="smalltextApp1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-           <a id="app1" href="appartement1.tpl.html">weiter</a>
+         <div class="app">
+           <div id="bild1"><img src="../bilder/haus-frontansicht.jpg" style="width: 100%; height: 100%; object-fit:cover;"></div>
+           <div id="smalltextApp">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
          </div>
 
          <div class="bilderkollage">
-           <div id="bilder"></div>
-           <input type="button" value=" > " />
-           <a id="app2" href="?aktion=appartement2">weiter</a>
-         </div>
+          <div class="slideshow-container">
 
-         <a id="buchung" href="">zur Buchung</a>
+           <div class="mySlides fade">
+             <div class="numbertext">1 / 3</div>
+             <img src="../bilder/wohnung_wald-2.jpg" style="width:100%">
+             <div class="text">Caption Text</div>
+           </div>
+
+           <div class="mySlides fade">
+             <div class="numbertext">2 / 3</div>
+             <img src="../bilder/wohnung_wald-2.jpg" style="width:100%">
+             <div class="text">Caption Two</div>
+           </div>
+
+           <div class="mySlides fade">
+             <div class="numbertext">3 / 3</div>
+             <img src="../bilder/wohnung_wald-3.jpg" style="width:100%">
+             <div class="text">Caption Three</div>
+           </div>
+
+           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+           <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          </div>
+          <br>
+           <div style="text-align:center">
+             <span class="dot" onclick="currentSlide(1)"></span>
+             <span class="dot" onclick="currentSlide(2)"></span>
+             <span class="dot" onclick="currentSlide(3)"></span>
+           </div>
+
+         </div>
+         <div id="weiter">
+         <a id="weiterBuchung" href="">zur Buchung</a>
+         </div>
 
        </div>
 
@@ -53,6 +81,35 @@
           <p>MwSt: </p>
           </div>
       </footer>
+
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
 
     </body>
     </html>
