@@ -27,7 +27,7 @@ html, body{
 }
 
 #navigation{
- width: 60%;
+ width: 70%;
  height: 100%;
  padding-top: 1.5%
 }
@@ -65,8 +65,9 @@ border: 1px solid var(--dark-white);
 }
 
 .content-allgemein{
-  width: 100%;
+  width: 99%;
   padding-bottom: 5%;
+  height: 60vh;
 }
 
 .app{
@@ -88,6 +89,10 @@ margin-bottom: 5vh;
   background-size: cover;
 }
 
+.anzeige{
+  height: 110%;
+}
+
 #smalltextApp{
   width: 80%;
   margin-left: 10%;
@@ -96,10 +101,12 @@ margin-bottom: 5vh;
 }
 
 #weiter{
-    margin-left: 46%;
+  width: 90%;
+  text-align: center;
 }
 
 #weiterBuchung{
+  position: absolute;
   color: black;
   border: 1px solid black;
   padding: 1vh;
@@ -115,10 +122,9 @@ margin-bottom: 5vh;
 }
 
 .slideshow-container {
-  position: relative;
+  position: absolute;
   margin: 5%;
-  margin-top: 10%;
-  margin-bottom: 0;
+  margin-bottom: 10%;
 }
 
 /* Next & previous buttons */
@@ -154,7 +160,7 @@ margin-bottom: 5vh;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 38px;
   width: 100%;
   text-align: center;
 }
@@ -240,5 +246,12 @@ border: 1px solid var(--dark-white);
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 600px) {
-  .prev, .next, .text, .footer-info-text, #anschrift, #smalltextApp {font-size: 10px}
+  .prev, .next, .text, .footer-info-text, #anschrift, #smalltextApp, #weiterBuchung {font-size: 10px}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 800px) {
+  .prev, .next, .text, .footer-info-text, #anschrift, #smalltextApp, #weiterBuchung {font-size: 12px}
+}
+@media only screen and (max-width: 800px) {
+  #navigation {font-size: 10px}
 }
