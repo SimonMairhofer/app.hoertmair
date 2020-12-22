@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/main-style.css">
+  <link rel="stylesheet" type="text/css" href="styles/buchung-style.css">
+  <meta charset="UTF-8">
+    <title>App. Hörtmair</title>
+</head>
+
+  <body>
+
+      <div class="homepage">
+        <div id="main-presentation">
+      <header>
+        <div id="navigation">
+          <a id="startseite" href="?aktion=startseite">Startseite</a>
+          <a id="kontakt" href="?aktion=startseite">Kontakt</a>
+          <a id="buchung" href="?aktion=buchung">Buchung</a>
+          <a id="umgebung" href="?aktion=startseite">Umgebung</a>
+        </div>
+
+      </header>
+      </div>
+        </div>
+
+       <div class="content-allgemein">
+
+         <div class="anzeige">
+
+         <div class="calendar">
+
+
+         </div>
+         <div class="formular">
+http://www.gassler.it/kontakt-anfrage-gassler-bauernhof-hochpustertal.php
+
+         </div>
+
+         </div>
+
+         <div id="senden">
+          <a id="sendenBuchung" href="">Senden</a>
+         </div>
+
+       </div>
+
+
+      <footer id="footer1">
+          <div id="anschrift">
+          <p>Appartements Hörtmair</p>
+          <p> Claudia</p>
+          <p> Sand in Taufers</p>
+          <p>Tel: <a href="tel:+39 0000 000000">+39 0000 000000</a> &nbsp; . &nbsp; Mobil: <a href="tel:+39 0000 000000">+39 0000 000000</a></p>
+          <p>E-Mail: <a href="mailto:"></a></p>
+          <p>MwSt: </p>
+          </div>
+      </footer>
+
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+
+    </body>
+    </html>
