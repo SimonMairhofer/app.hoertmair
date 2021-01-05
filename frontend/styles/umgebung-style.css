@@ -75,8 +75,10 @@ border: 1px solid var(--dark-white);
 height: 60vh;
 }
 .map{
-  height: 100px;
-  width: 100px;
+  height: 50vh;
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 5%;
 }
 
 .anzeige{
