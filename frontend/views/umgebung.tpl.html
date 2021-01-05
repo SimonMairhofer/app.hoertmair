@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles/main-style.css">
+  <link rel="stylesheet" type="text/css" href="styles/umgebung-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin="">
+  ;
+  </script>
+
+
+    <title>App. Hörtmair</title>
+</head>
+
+  <body>
+
+      <div class="homepage">
+        <div id="main-presentation">
+      <header>
+        <div id="navigation">
+          <a id="startseite" href="?aktion=startseite">Startseite</a>
+          <a id="kontakt" href="?aktion=startseite">Preise</a>
+          <a id="buchung" href="?aktion=buchung">Buchung</a>
+          <a id="umgebung" href="?aktion=startseite">Umgebung</a>
+        </div>
+
+      </header>
+      </div>
+        </div>
+
+       <div class="content-allgemein">
+
+         <div class="anzeige">
+
+           <div class="map" id="mapid"></div>
+         <div class="location">
+
+         </div>
+
+         <div class="formular">
+
+         </div>
+
+         </div>
+
+         <div id="weiter">
+          <a id="weiterBuchung" href="?aktion=buchung">zur Buchung</a>
+         </div>
+
+       </div>
+
+
+      <footer id="footer1">
+          <div id="anschrift">
+          <p>Appartements Hörtmair</p>
+          <p> Claudia</p>
+          <p> Sand in Taufers</p>
+          <p>Tel: <a href="tel:+39 0000 000000">+39 0000 000000</a> &nbsp; . &nbsp; Mobil: <a href="tel:+39 0000 000000">+39 0000 000000</a></p>
+          <p>E-Mail: <a href="mailto:"></a></p>
+          <p>MwSt: </p>
+          </div>
+      </footer>
+      <script>
+        var map = L.map('mapid').setView([46.521202,11.2272281], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([46.521202,11.2272281]).addTo(map);
+      </script>
+    </body>
+    </html>

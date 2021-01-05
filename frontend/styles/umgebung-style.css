@@ -27,7 +27,7 @@ html, body{
 }
 
 #navigation{
- width: 60%;
+ width: 70%;
  height: 100%;
  padding-top: 1.5%
 }
@@ -65,95 +65,46 @@ border: 1px solid var(--dark-white);
 }
 
 .content-allgemein{
-  width: 100%;
+  width: 99%;
   padding-bottom: 5%;
+  height: auto;
 }
 
-.app1{
+.location{
  width: 50%;
 height: 60vh;
- float: left;
+}
+.map{
+  height: 100px;
+  width: 100px;
 }
 
-#bild1{
-  width: 60%;
-  height: 30%;
-  margin: auto;
-  margin-top: 10%;
-  background-image: url("../../bilder/haus-frontansicht.jpg");
-  background-color: #cccccc;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.anzeige{
+  display: flex;
+  flex-direction: row;
+  height: auto;
 }
 
-#smalltextApp1{
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 5vh;
-  font-size: 2.1vh;
-}
-
-#app1{
-  color: black;
-  border: 1px solid black;
-  float: left;
-  margin: 5vh;
-  padding: 1vh;
-  text-decoration: none;
-  border-radius: 10px;
-}
-
-#app1:hover{
-  background-color: orange;
-}
-
-.app2{
- width: 50%;
- height: 60vh;
-float: right;
-}
-
-#bild2{
-  width: 60%;
-  height: 30%;
-  margin: auto;
-  margin-top: 10%;
-  background-image: url("../../bilder/haus-frontansicht.jpg");
-  background-color: #cccccc;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#smalltextApp2{
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 5vh;
-  font-size: 2.1vh;
-}
-
-#app2{
-  color: black;
-  border: 1px solid black;
-  float: right;
-  margin: 5vh;
-  padding: 1vh;
-  text-decoration: none;
-  border-radius: 10px;
-}
-
-#app2:hover{
-  background-color: orange;
+#weiter{
+  width: 90%;
+  text-align: center;
 }
 
 #weiterBuchung{
+  position: absolute;
   color: black;
   border: 1px solid black;
-  margin-left: 46%;
   padding: 1vh;
   text-decoration: none;
   border-radius: 3px;
+}
+
+.formular{
+  width: 50%;
+  height: 60px;
+  margin-bottom: 5vh;
+ float: right;
+ text-align: center;
 }
 
 #footer1{
@@ -161,7 +112,7 @@ margin: 0;
 padding: 0;
   width: 85%;
 margin-left: 7.5%;
-margin-top: 2.5%;
+margin-top: 10%;
 border: 1px solid var(--dark-white);
   background-color: white;
   -webkit-box-shadow: 1px 5px 5px 0px rgba(240,240,240,1);
@@ -192,12 +143,16 @@ border: 1px solid var(--dark-white);
   font-size: 12px;
 }
 
+/* On smaller screens, decrease text size */
 @media only screen and (max-width: 600px) {
-  #smalltextApp2, #smalltextApp1, #anschrift, #weiterBuchung {font-size: 10px}
+  .formular, .calendar, #anschrift {font-size: 10px}
 }
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 800px) {
-  #smalltextApp2, #smalltextApp1, #anschrift, #weiterBuchung {font-size: 12px}
+  .formular, .calendar, #anschrift {font-size: 12px; width: 100%;}
+}
+@media only screen and (max-width: 800px) {
+  .anzeige {flex-direction: column;}
 }
 @media only screen and (max-width: 800px) {
   #navigation {font-size: 10px}
