@@ -100,6 +100,37 @@ margin-bottom: 5vh;
   height: 60vh;
   margin-bottom: 5vh;
  float: right;
+ text-align: center;
+}
+
+.list{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+
+}
+.lsititem{
+  margin-bottom: 1vh;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.form_required{
+  color: red;
+}
+.text_box{
+  width: 45%;
+  margin-bottom: 1vh;
+}
+.label{
+  width: 100%;
+  margin-bottom: 1vh;
+  font-weight: bold;
+  text-align: center;
 }
 
 #footer1{
