@@ -67,18 +67,20 @@ border: 1px solid var(--dark-white);
 .content-allgemein{
   width: 99%;
   padding-bottom: 5%;
-  height: 60vh;
+  height: auto;
 }
 
 .calendar{
  width: 50%;
-height: 60vh;
+height: auto;
 margin-bottom: 5vh;
  float: left;
 }
 
 .anzeige{
-  height: 110%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
 }
 
 #senden{
@@ -97,9 +99,40 @@ margin-bottom: 5vh;
 
 .formular{
   width: 50%;
-  height: 60vh;
+  height: auto;
   margin-bottom: 5vh;
  float: right;
+ text-align: center;
+}
+
+.list{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+
+}
+.lsititem{
+  margin-bottom: 1vh;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.form_required{
+  color: red;
+}
+.text_box{
+  width: 45%;
+  margin-bottom: 1vh;
+}
+.label{
+  width: 100%;
+  margin-bottom: 1vh;
+  font-weight: bold;
+  text-align: center;
 }
 
 #footer1{
@@ -144,7 +177,10 @@ border: 1px solid var(--dark-white);
 }
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 800px) {
-  .formular, .calendar, #anschrift {font-size: 12px}
+  .formular, .calendar, #anschrift {font-size: 12px; width: 100%;}
+}
+@media only screen and (max-width: 800px) {
+  .anzeige {flex-direction: column;}
 }
 @media only screen and (max-width: 800px) {
   #navigation {font-size: 10px}

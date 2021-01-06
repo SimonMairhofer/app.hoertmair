@@ -15,9 +15,9 @@
       <header>
         <div id="navigation">
           <a id="startseite" href="?aktion=startseite">Startseite</a>
-          <a id="kontakt" href="?aktion=startseite">Kontakt</a>
+          <a id="preise" href="?aktion=startseite">Preise</a>
           <a id="buchung" href="?aktion=buchung">Buchung</a>
-          <a id="umgebung" href="?aktion=startseite">Umgebung</a>
+          <a id="umgebung" href="?aktion=umgebung">Umgebung</a>
         </div>
 
       </header>
@@ -30,11 +30,119 @@
 
          <div class="calendar">
 
-
          </div>
-         <div class="formular">
-http://www.gassler.it/kontakt-anfrage-gassler-bauernhof-hochpustertal.php
 
+         <div class="formular">
+          <ol class="list">
+            <li class="lsititem" >
+              <div class="label" style="margin-top: 1vh;">
+           	    <label class="form_field">Vorname:</label>
+                <label class="form_required">*</label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">Nachname:</label>
+                <label class="form_required">*</label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">Straße:</label>
+                <label class="form_required">*</label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">Ort & Plz:</label>
+                <label class="form_required">*</label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">E-Mail:</label>
+                <label class="form_required"></label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">Telefonnummer:</label>
+                <label class="form_required">*</label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">Anreisedatum:</label>
+                <label class="form_required">*</label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">Abreisedatum:</label>
+                <label class="form_required">*</label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">Anzahl Erwachsener:</label>
+                <label class="form_required">*</label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">Anzahl Kinder:</label>
+                <label class="form_required">*</label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">Appartemet: (Wald/Wiese)</label>
+                <label class="form_required">*</label>
+              </div>
+           	  <div class="field">
+           	    <input type="text" name="field_0" id="field_0" value="" class="text_box">
+           	 </div>
+            </li>
+            <li class="lsititem" >
+              <div class="label">
+           	    <label class="form_field">Besonderheiten & Fragen:</label>
+                <label class="form_required"></label>
+              </div>
+           	  <div class="field">
+           	    <textarea name="textarea_1" id="textarea_1" rows="4" cols="25" class="text_area"></textarea>
+           	 </div>
+            </li>
+          </ol>
          </div>
 
          </div>
@@ -56,35 +164,6 @@ http://www.gassler.it/kontakt-anfrage-gassler-bauernhof-hochpustertal.php
           <p>MwSt: </p>
           </div>
       </footer>
-
-      <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-      }
-      </script>
 
     </body>
     </html>
