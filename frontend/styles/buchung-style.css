@@ -158,6 +158,9 @@ margin-bottom: 5vh;
 .date-picker.selected span {
   color: #00BCD4;
 }
+.occupied {
+  background-color: yellow;
+}
 /* sunday */
 
 .date-picker:nth-child(1), .red-text {

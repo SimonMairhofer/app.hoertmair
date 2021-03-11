@@ -11,8 +11,11 @@ private $context = array();
   }
 
   private function buchen(){
-    $content = new Buchungsinfo(array("vorname"=>$_POST[field_0],"nachname"=>$_POST[field_1]),)
-    $content->speichere();
+    if(isset($_POST["submit"])){
+     $content = new Buchungsinfo(array("vorname"=>$_POST["field_0"],"nachname"=>$_POST["field_1"],"strasse"=>$_POST["field_2"],"ortPLZ"=>$_POST["field_3"],"email"=>$_POST["field_4"],"telefon"=>$_POST["field_5"],
+     "anreise"=>$_POST["field_6"],"abreise"=>$_POST["field_7"],"anzErwachsene"=>$_POST["field_8"],"anzKinder"=>$_POST["field_9"],"appartement"=>$_POST["field_10"],"anfragen"=>$_POST["textarea_1"]));
+     $content->speichere();
+   }
     header("Location: index.php?aktion=buchung");
   }
 
@@ -27,7 +30,7 @@ private $context = array();
 
   }
   private function buchung(){
-
+    $this->addContext("datums",Buchungsinfo::getDatums());
   }
   private function preise(){
 

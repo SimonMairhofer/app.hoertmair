@@ -26,8 +26,6 @@
 
        <div class="content-allgemein">
 
-      <form class="" action="?aktion=buchen" method="post">
-
          <div class="anzeige">
 
          <div class="calendar">
@@ -68,11 +66,11 @@
         	</div>
          </div>
 
-         <div class="formular">
+         <form class="formular" action="?aktion=buchen" method="post">
           <ol class="list">
             <li class="lsititem" >
               <div class="label" style="margin-top: 1vh;">
-           	    <label class="form_field">Vorname:</label>
+           	    <label class="form_field">Vorname: </label>
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
@@ -180,15 +178,13 @@
             </li>
           </ol>
 
-         </div>
-
-         </div>
-
          <div id="senden">
            <input type="submit" name="submit" value="Senden" id="sendenBuchung">
          </div>
 
          </form>
+
+        </div>
 
        </div>
 
@@ -302,6 +298,15 @@
             cell.setAttribute("data-month-name", months[month]);
             cell.className = "date-picker";
             cell.innerHTML = "<span>" + date + "</span>";
+            var dispalyDay = date;
+            var dispalyMonth = month + 1;
+            if(dispalyDay <= 9 ){ dispalyDay = "0" + dispalyDay}
+            if(dispalyMonth <= 9 ){ dispalyMonth = "0" + dispalyMonth}
+            var datum = dispalyDay + "-" + dispalyMonth + "-" + year;
+            console.log("<?php  echo $datums->getAnreise(); ?>");
+            if("<?php  echo $datums->getAnreise(); ?>" == "0000-00-00"){
+              cell.classList.add("occupied");
+            }
             cell.onclick = function(event) {
               var dates = document.querySelectorAll(".date-picker");
               var currentTarget = event.currentTarget;
