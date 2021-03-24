@@ -66,11 +66,11 @@
         	</div>
          </div>
 
-         <div class="formular">
+         <form class="formular" action="?aktion=buchen" method="post">
           <ol class="list">
             <li class="lsititem" >
               <div class="label" style="margin-top: 1vh;">
-           	    <label class="form_field">Vorname:</label>
+           	    <label class="form_field">Vorname: </label>
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
@@ -83,7 +83,7 @@
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_0" id="field_1" value="" class="text_box">
+           	    <input type="text" name="field_1" id="field_1" value="" class="text_box">
            	 </div>
             </li>
             <li class="lsititem" >
@@ -92,7 +92,7 @@
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_0" id="field_2" value="" class="text_box">
+           	    <input type="text" name="field_2" id="field_2" value="" class="text_box">
            	 </div>
             </li>
             <li class="lsititem" >
@@ -101,7 +101,7 @@
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_0" id="field_3" value="" class="text_box">
+           	    <input type="text" name="field_3" id="field_3" value="" class="text_box">
            	 </div>
             </li>
             <li class="lsititem" >
@@ -110,7 +110,7 @@
                 <label class="form_required"></label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_0" id="field_4" value="" class="text_box">
+           	    <input type="text" name="field_4" id="field_4" value="" class="text_box">
            	 </div>
             </li>
             <li class="lsititem" >
@@ -119,7 +119,7 @@
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_0" id="field_5" value="" class="text_box">
+           	    <input type="text" name="field_5" id="field_5" value="" class="text_box">
            	 </div>
             </li>
             <li class="lsititem" >
@@ -128,7 +128,7 @@
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_0" id="field_6" value="" class="text_box">
+           	    <input type="text" name="field_6" id="field_6" value="" class="text_box">
            	 </div>
             </li>
             <li class="lsititem" >
@@ -137,7 +137,7 @@
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_0" id="field_7" value="" class="text_box">
+           	    <input type="text" name="field_7" id="field_7" value="" class="text_box">
            	 </div>
             </li>
             <li class="lsititem" >
@@ -146,7 +146,7 @@
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_0" id="field_8" value="" class="text_box">
+           	    <input type="text" name="field_8" id="field_8" value="" class="text_box">
            	 </div>
             </li>
             <li class="lsititem" >
@@ -155,7 +155,7 @@
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_0" id="field_9" value="" class="text_box">
+           	    <input type="text" name="field_9" id="field_9" value="" class="text_box">
            	 </div>
             </li>
             <li class="lsititem" >
@@ -164,7 +164,7 @@
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_0" id="field_10" value="" class="text_box">
+           	    <input type="text" name="field_10" id="field_10" value="" class="text_box">
            	 </div>
             </li>
             <li class="lsititem" >
@@ -177,13 +177,14 @@
            	 </div>
             </li>
           </ol>
-         </div>
-
-         </div>
 
          <div id="senden">
-          <a id="sendenBuchung" href="">Senden</a>
+           <input type="submit" name="submit" value="Senden" id="sendenBuchung">
          </div>
+
+         </form>
+
+        </div>
 
        </div>
 
@@ -297,6 +298,15 @@
             cell.setAttribute("data-month-name", months[month]);
             cell.className = "date-picker";
             cell.innerHTML = "<span>" + date + "</span>";
+            var dispalyDay = date;
+            var dispalyMonth = month + 1;
+            if(dispalyDay <= 9 ){ dispalyDay = "0" + dispalyDay}
+            if(dispalyMonth <= 9 ){ dispalyMonth = "0" + dispalyMonth}
+            var datum = dispalyDay + "-" + dispalyMonth + "-" + year;
+            console.log("<?php  echo $datums->getAnreise(); ?>");
+            if("<?php  echo $datums->getAnreise(); ?>" == "0000-00-00"){
+              cell.classList.add("occupied");
+            }
             cell.onclick = function(event) {
               var dates = document.querySelectorAll(".date-picker");
               var currentTarget = event.currentTarget;

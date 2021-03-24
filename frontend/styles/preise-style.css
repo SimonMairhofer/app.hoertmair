@@ -209,5 +209,14 @@ border: 1px solid var(--dark-white);
   .anzeige {flex-direction: column;}
 }
 @media only screen and (max-width: 800px) {
+  .anzeige {flex-direction: column;}
+}
+@media only screen and (max-width: 800px) {
+  .preise, .inklusive, #anschrift {font-size: 12px; width: 100%; text-align: center;}
+}
+@media only screen and (max-width: 800px) {
   #navigation {font-size: 10px}
+}
+@media only screen and (max-width: 450px) {
+  #navigation {font-size: 8px}
 }

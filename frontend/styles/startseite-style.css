@@ -10,6 +10,7 @@ html, body{
   margin: 0;
   font-family: "Roboto","Helvetica",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
+
 .homepage{
   width: 99%;
   margin: 0.5%;
@@ -91,6 +92,12 @@ border: none;
   padding-bottom: 5%;
 }
 
+.anzeige{
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+
 .app1{
  width: 50%;
 height: 60vh;
@@ -169,10 +176,16 @@ float: right;
   background-color: orange;
 }
 
+
+#zurBuchung{
+  width: 90%;
+  text-align: center;
+}
+
 #weiterBuchung{
+  position: absolute;
   color: black;
   border: 1px solid black;
-  margin-left: 46%;
   padding: 1vh;
   text-decoration: none;
   border-radius: 3px;
@@ -214,13 +227,22 @@ border: 1px solid var(--dark-white);
   font-size: 12px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   #smalltextApp2, #smalltextApp1, #anschrift, #weiterBuchung {font-size: 10px}
 }
-/* On smaller screens, decrease text size */
 @media only screen and (max-width: 800px) {
+  .anzeige {flex-direction: column;}
+}
+@media only screen and (max-width: 800px) {
+  .app1, .app2 {width: 100%;}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 1000px) {
   #smalltextApp2, #smalltextApp1, #anschrift, #weiterBuchung {font-size: 12px}
 }
 @media only screen and (max-width: 800px) {
   #navigation {font-size: 10px}
+}
+@media only screen and (max-width: 450px) {
+  #navigation {font-size: 8px}
 }
