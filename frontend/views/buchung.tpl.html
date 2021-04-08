@@ -303,7 +303,24 @@
             if(dispalyDay <= 9 ){ dispalyDay = "0" + dispalyDay}
             if(dispalyMonth <= 9 ){ dispalyMonth = "0" + dispalyMonth}
             var datum = year + "-" + dispalyMonth + "-" + dispalyDay;
-            if("<?php  echo $datums->getAnreise(); ?>" <= datum && "<?php  echo $datums->getAbreise(); ?>" >= datum){
+            var temp1 = "<?php foreach($anreiseDatum as $anD ){
+                echo $anD->getAnreise()."#";
+              }; ?>";
+            anreise = temp1.split("#");
+            var temp2 = "<?php foreach($abreiseDatum as $abD ){
+                echo $anD->getAbreise()."#";
+              }; ?>";
+            abreise = temp2.split("#");
+            for (var i = 0; i < anreise.length; i++) {
+              console.log(anreise[i]);
+              console.log(datum);
+              if(anreise[i] <= datum && abreise[i] >= datum){
+                console.log(anreise[i]);
+                cell.classList.add("occupied");
+              }
+            }
+
+            if("<?php  echo $datum->getAnreise(); ?>" <= datum && "<?php  echo $datum->getAbreise(); ?>" >= datum){
               cell.classList.add("occupied");
             }
             cell.onclick = function(event) {
