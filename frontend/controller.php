@@ -30,7 +30,9 @@ private $context = array();
 
   }
   private function buchung(){
-    $this->addContext("datums",Buchungsinfo::getDatums());
+    $this->addContext("datum",Buchungsinfo::getDatum());
+    $this->addContext("anreiseDatum",Buchungsinfo::getAnreiseDatum());
+    $this->addContext("abreiseDatum",Buchungsinfo::getAbreiseDatum());
   }
   private function preise(){
 

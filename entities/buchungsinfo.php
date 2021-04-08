@@ -34,7 +34,7 @@ public function __construct($daten = array())
 public function  __toString()
 {
     return 'Id:'. $this->id .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Strasse: '.$this->strasse.', OrtPLZ: '.$this->ortPLZ.', Email: '.$this->email.', Telefon: '.$this->telefon.', Anreise:'.$this->anreise.', Abreise: '.
-    $this->abreise.', AnzErwachsener: '.$this->anzErwachsene.', AnzKinder: '.$this->anzKinder.', Appartement: '.$this->appartement.', Anfragen: '.$this->anfragen;
+    $this->abreise.', AnzErwachsene: '.$this->anzErwachsene.', AnzKinder: '.$this->anzKinder.', Appartement: '.$this->appartement.', Anfragen: '.$this->anfragen;
 }
 
 public function toArray($mitId = true)
@@ -71,7 +71,7 @@ $sql = 'INSERT INTO buchungsinfo ( vorname, nachname, strasse, ortPLZ, email, te
 
 private function _update()
 {
-    $sql = 'UPDATE buchungsinfo SET id=:id, vorname=:vorname, nachname=:nachname,alter=:alter,appartement=:appartement,strasse=:strasse,ortPLZ=:ortPLZ,email=:email,email=:email,telefon=:telefon,anreise=:anreise,abreise=:abreise,anzErwachsene=:anzErwachsene,anzKinder=:anzKinder WHERE id=:id';
+    $sql = 'UPDATE buchungsinfo SET id=:id, vorname=:vorname, nachname=:nachname,alter=:alter,appartement=:appartement,strasse=:strasse,ortPLZ=:ortPLZ,email=:email,email=:email,telefon=:telefon,anreise=:anreise,abreise=:abreise,anzErwachsene=:anzErwachsene,anzKinder=:anzKinder,anfragen=:anfragen WHERE id=:id';
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray());
 }
@@ -122,12 +122,25 @@ public function getAbreiseDatum(){
 }
 */
 
-public function getDatums(){
+public function getDatum(){
   $sql = 'SELECT anreise, abreise FROM buchungsinfo';
   $abfrage = DB::getDB()->prepare($sql);
   $abfrage->execute(array());
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Buchungsinfo');
   return $abfrage->fetch();
+}
+public function getAnreiseDatum(){
+  $sql = 'SELECT anreise FROM buchungsinfo';
+  $abfrage = DB::getDB()->query($sql);
+  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Buchungsinfo');
+  return $abfrage->fetchAll();
+}
+
+public function getAbreiseDatum(){
+  $sql = 'SELECT abreise FROM buchungsinfo';
+  $abfrage = DB::getDB()->query($sql);
+  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Buchungsinfo');
+  return $abfrage->fetchAll();
 }
 
 public function setId($id){
@@ -196,17 +209,23 @@ public function setAbreise($abreise){
 public function getAbreise(){
   return $this->abreise;
 }
-public function setAnzErwachsener($anzErwachsener){
-  $this->anzErwachsener = $anzErwachsener;
+public function setAnzErwachsene($anzErwachsene){
+  $this->anzErwachsene = $anzErwachsene;
 }
-public function getAnzErwachsener(){
-  return $this->anzErwachsener;
+public function getAnzErwachsene(){
+  return $this->anzErwachsene;
 }
 public function setAnzKinder($anzKinder){
   $this->anzKinder = $anzKinder;
 }
 public function getAnzKinder(){
   return $this->anzKinder;
+}
+public function setAnfragen($anfragen){
+  $this->anfragen = $anfragen;
+}
+public function getAnfragen(){
+  return $this->anfragen;
 }
 
 
