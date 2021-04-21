@@ -264,8 +264,16 @@ margin-bottom: 5vh;
 }
 .text_box{
   width: 45%;
+  height: 2vh;
   margin-bottom: 1vh;
+  border-radius: 10vh;
+  color: grey;
 }
+
+.text_box:focus{
+  background-color: pink;
+}
+
 .label{
   width: 100%;
   margin-bottom: 1vh;
