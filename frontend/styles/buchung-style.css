@@ -20,7 +20,7 @@ html, body{
 #main-presentation{
   background-image: url("../../bilder/haus-frontansicht.jpg");
   background-color: #cccccc;
-  height: 75vh;
+  height: 45vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -159,7 +159,8 @@ margin-bottom: 5vh;
   color: #00BCD4;
 }
 .occupied {
-  background-color: yellow;
+  background-color: gold;
+
 }
 /* sunday */
 
@@ -264,8 +265,17 @@ margin-bottom: 5vh;
 }
 .text_box{
   width: 45%;
+  height: 2.5vh;
   margin-bottom: 1vh;
+  border-radius: 10vh;
+  outline: none;
 }
+
+#field_10 {
+  height: 3vh;
+  border: 2px solid black;
+}
+
 .label{
   width: 100%;
   margin-bottom: 1vh;
