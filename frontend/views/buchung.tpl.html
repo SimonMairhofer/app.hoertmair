@@ -66,7 +66,7 @@
         	</div>
          </div>
 
-         <form class="formular" action="?aktion=buchen" method="post">
+         <form class="formular" action="?aktion=buchen" method="post" >
           <ol class="list">
             <li class="lsititem" >
               <div class="label" style="margin-top: 1vh;">
@@ -160,11 +160,15 @@
             </li>
             <li class="lsititem" >
               <div class="label">
-           	    <label class="form_field">Appartemet: (Wald/Wiese)</label>
+           	    <label class="form_field">Appartemet: </label>
                 <label class="form_required">*</label>
               </div>
            	  <div class="field">
-           	    <input type="text" name="field_10" id="field_10" value="" class="text_box" required>
+                <select name="field_10" id="field_10" class="text_box" required>
+                  <option value=""> </option>
+                  <option value="1">Appartemet Wiese</option>
+                  <option value="0">Appartemet Wald</option>
+                </select>
            	 </div>
             </li>
             <li class="lsititem" >
