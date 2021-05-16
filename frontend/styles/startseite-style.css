@@ -42,7 +42,7 @@ html{
  height: 100%;
  padding-top: 1.5%;
  margin-left: 5%;
- font-size: 24px;
+ font-size: 36px;
  color: #fff;
  font-weight: bold;
  position: relative;
@@ -113,10 +113,6 @@ border: none;
   height: auto;
 }
 
-
-
-
-
 .app1{
  width: 47%;
  min-height: 50vh;
@@ -127,6 +123,7 @@ border: none;
  background-color: #FFC971;
  display: flex;
  flex-direction: column;
+ align-items: center;
 }
 
 
@@ -144,16 +141,16 @@ border: none;
   padding: 10px;
   width: 5vh;
   margin: 2vh;
-  color: black;
-  border: 1px solid black;
+  margin-top: 0;
+  color: #464646;
+  border: 1px solid #464646;
   text-decoration: none;
   border-radius: 10px;
   text-align: center;
-
 }
 
-#app1:hover{
-  background-color: orange;
+.appButton:hover{
+  background-color: darkorange;
 }
 
 
@@ -164,40 +161,46 @@ border: none;
   padding: 10px;
   width: 15vh;
   margin-top: 2vh;
-  color: black;
-  border: 1px solid black;
+  color: #464646;
+  border: 1px solid #464646;
   text-decoration: none;
   border-radius: 3px;
   text-align: center;
 }
 
 #footer1{
+  color: white;
 margin: 0;
 padding: 0;
-  height: 20vh !important;
+  height: auto;
 margin-top: 2.5%;
 border: 1px solid var(--dark-white);
-  background-color: lightgray;
+  background-color: #333;
   -webkit-box-shadow: 1px 5px 5px 0px rgba(240,240,240,1);
   -moz-box-shadow: 1px 5px 5px 0px rgba(240,240,240,1);
   box-shadow: 1px 5px 5px 0px rgba(240,240,240,1);
   cursor: pointer;
-
+display: flex;
+flex-direction: row;
+justify-content: center;
 }
 
 #anschrift{
-  float: left;
-  width: 30%;
-  font-size: 12px;
-      margin-left: 5%;
+  width: auto;
+  font-size: 18px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  text-align: center;
 }
 
 .bildAnzeige{
-  min-height: 50%;
+  margin-top: 1vh;
+  min-height: 40%;
   background-repeat: no-repeat;
   background-position: center;
   min-width: auto;
   background-size: contain;
+  align-self: normal;
 }
 
 #bild1{
@@ -209,21 +212,25 @@ border: 1px solid var(--dark-white);
 }
 
 @media only screen and (max-width: 900px) {
-  #smalltext, #anschrift, #weiterBuchung {font-size: 10px}
+  #smalltext, #anschrift, #kontaktDaten, #weiterBuchung {font-size: 10px}
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1040px) {
   .anzeige {flex-direction: column;}
+  .bildAnzeige {min-height: 30vh;}
 }
-@media only screen and (max-width: 800px) {
-  .app1 {width: 100%;}
+@media only screen and (max-width: 1040px) {
+  .app1 {width: 97%;}
 }
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 1000px) {
-  #smalltext, #anschrift, #weiterBuchung {font-size: 12px}
+  #smalltext, #anschrift, #kontaktDaten, #weiterBuchung {font-size: 12px}
 }
-@media only screen and (max-width: 800px) {
-  #navigation {font-size: 10px}
+@media only screen and (max-width: 1000px) {
+  #navigation {font-size: 18px}
+  #startseite, #preise, #buchung, #umgebung {margin: 0.5vh;}
 }
-@media only screen and (max-width: 450px) {
-  #navigation {font-size: 8px}
+@media only screen and (max-width: 650px) {
+  #navigation {font-size: 12px;}
+  .bildAnzeige {min-height: 25vh; margin-top: 2vh;}
+  #main-presentation{ height: 50vh;}
 }

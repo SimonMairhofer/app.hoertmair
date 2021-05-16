@@ -13,17 +13,19 @@ html, body{
 .homepage{
   width: 99%;
   margin: 0.5%;
-  border: 1px solid var(--dark-white);
   padding-bottom: 0.5%;
+  background-color: white;
 }
 
 #main-presentation{
   background-image: url("../../bilder/haus-frontansicht.jpg");
   background-color: #cccccc;
-  height: 45vw;
+  height: 75vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
+  border-radius: 3px;
 }
 
 #navigation{
@@ -31,7 +33,7 @@ html, body{
  height: 100%;
  padding-top: 1.5%;
  margin-left: 5%;
- font-size: 24px;
+ font-size: 36px;
  color: #fff;
  font-weight: bold;
  position: relative;
@@ -111,6 +113,7 @@ margin-bottom: 5vh;
   width: 100%;
   margin: 0 auto;
   overflow: auto;
+  margin: 5%;
 }
 .button-container-calendar button {
   position: relative;
@@ -242,6 +245,7 @@ margin-bottom: 5vh;
   margin-bottom: 5vh;
  float: right;
  text-align: center;
+ margin-left: 5%;
 }
 
 .list{
@@ -284,39 +288,28 @@ margin-bottom: 5vh;
 }
 
 #footer1{
+  color: white;
 margin: 0;
 padding: 0;
-  width: 85%;
-margin-left: 7.5%;
-margin-top: 10%;
+  height: auto;
+margin-top: 2.5%;
 border: 1px solid var(--dark-white);
-  background-color: white;
+  background-color: #333;
   -webkit-box-shadow: 1px 5px 5px 0px rgba(240,240,240,1);
   -moz-box-shadow: 1px 5px 5px 0px rgba(240,240,240,1);
   box-shadow: 1px 5px 5px 0px rgba(240,240,240,1);
   cursor: pointer;
-  .footer-info-text{
-    display: block;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 2%;
-    font-weight: normal;
-    color: $main-blue;
-    padding-bottom: 10px;
-    text-decoration: none;
-  }
-  &:hover{
-    background-color: ligthen($main-blue, 40%) !important;
-  }
+display: flex;
+flex-direction: row;
+justify-content: center;
 }
 
 #anschrift{
-  float: left;
-  width: 30%;
-  font-size: 12px;
+  width: auto;
+  font-size: 18px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  text-align: center;
 }
 
 /* On smaller screens, decrease text size */
@@ -330,9 +323,11 @@ border: 1px solid var(--dark-white);
 @media only screen and (max-width: 800px) {
   .anzeige {flex-direction: column;}
 }
-@media only screen and (max-width: 800px) {
-  #navigation {font-size: 10px}
+@media only screen and (max-width: 1000px) {
+  #navigation {font-size: 18px}
+  #startseite, #preise, #buchung, #umgebung {margin: 0.5vh;}
 }
-@media only screen and (max-width: 450px) {
-  #navigation {font-size: 8px}
+@media only screen and (max-width: 650px) {
+  #navigation {font-size: 12px;}
+  #main-presentation{ height: 50vh;}
 }

@@ -7,7 +7,7 @@ class Funktionen{
         require_once 'PHPMailer-master/src/PHPMailer.php';
 
         $subject = strip_tags('Anfrage für das Appartement: ' . $anfrage["appartement"]);
-        $message = strip_tags($_POST['Id:'. $this->id .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Strasse: '.$this->strasse.', OrtPLZ: '.$this->ortPLZ.', Email: '.$this->email.', Telefon: '.$this->telefon.', Anreise:'.$this->anreise.', Abreise: '.
+        $message = strip_tags('Alle Informationen zu der Anfrage auf eine Reservierung:' . $_POST['Id:'. $this->id .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Strasse: '.$this->strasse.', OrtPLZ: '.$this->ortPLZ.', Email: '.$this->email.', Telefon: '.$this->telefon.', Anreise:'.$this->anreise.', Abreise: '.
         $this->abreise.', AnzErwachsene: '.$this->anzErwachsene.', AnzKinder: '.$this->anzKinder.', Appartement: '.$this->appartement.', Anfragen: '.$this->anfragen]);
 
                 $mailer = new \PHPMailer\PHPMailer\PHPMailer();
