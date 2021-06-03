@@ -18,7 +18,7 @@ html, body{
 }
 
 #main-presentation{
-  background-image: url("../../bilder/haus-frontansicht.jpg");
+  background-image: url("../bilder/haus-frontansicht.jpg");
   background-color: #cccccc;
   height: 75vh;
   background-position: center;
@@ -246,6 +246,7 @@ margin-bottom: 5vh;
  float: right;
  text-align: center;
  margin-left: 5%;
+ color: #464646;
 }
 
 .list{
